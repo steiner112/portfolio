@@ -17,13 +17,13 @@ export default function Projects() {
         
       </div>
       <div className="card__img"></div>
-      <a href="#" className="card_link">
+      <a href="https://www.bloggingthemestyles.com/wp-content/uploads/2019/02/menu-placeholder.jpg" className="card_link">
          <div className="card__img--hover"></div>
        </a>
       <div className="card__info">
-        <span className="card__category">Full Stack</span>
+        <span className="card__category">Full Stack..</span>
         <h3 className="card__title">watch</h3>
-        <span className="card__by">by <a href="#" className="card__author" title="author">anurag verma</a></span>
+        <span className="card__by">by <a href="https://www.bloggingthemestyles.com/wp-content/uploads/2019/02/menu-placeholder.jpggit" className="card__author" title="author">anurag verma</a></span>
       </div>
     </article>
       
@@ -40,13 +40,13 @@ export default function Projects() {
         
       </div>
       <div className="card__img"></div>
-      <a href="#" className="card_link">
+      <a href="https://www.bloggingthemestyles.com/wp-content/uploads/2019/02/menu-placeholder.jpg" className="card_link">
          <div className="card__img--hover"></div>
        </a>
       <div className="card__info">
         <span className="card__category">Full Stack</span>
         <h3 className="card__title">Ecommerce web site</h3>
-        <span className="card__by">by <a href="#" className="card__author" title="author">anurag verma</a></span>
+        <span className="card__by">by <a href="https://www.bloggingthemestyles.com/wp-content/uploads/2019/02/menu-placeholder.jpg" className="card__author" title="author">anurag verma</a></span>
       </div>
     </article>  
       </section>
