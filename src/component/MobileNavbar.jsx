@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function MobileNavbar() {
     return (
         <>
-        
+        <header>
           <nav id="navMob" role="navigation">
           
             <div id="menuToggle">
@@ -21,7 +21,7 @@ function MobileNavbar() {
            </div>
           </nav>
      
-          
+          </header>
         </>
     );
 }

@@ -1,0 +1,14 @@
+header{
+    position: relative;
+}
+main{
+    position: relative;
+    top: 0%;
+    bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    position: relative;
+}

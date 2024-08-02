@@ -1,11 +1,10 @@
 footer{
     position: fixed;
-    z-index: 10;
+    /* z-index: 10; */
     display: flex; 
     justify-content: space-around;
-    bottom: 0%;
     width: 100%;
-    display: flex;
+    bottom: 0%;
     margin: 0%;
     padding: 0%;
     background-color: rgba(99, 91, 91, 0.09);
@@ -33,3 +32,18 @@ footer{
     height: 8vmin;
     margin: 10px;
    }
+
+   @media screen and (max-width:700px) {
+   
+       .cards{
+        height: fit-content;
+       }
+       .diff{
+        background-color: #00e280;
+        margin-top: 20px;
+      }
+   }
+   @media screen and (min-width:701px) {
+   
+    
+}

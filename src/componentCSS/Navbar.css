@@ -1,24 +1,34 @@
 nav {
     position: relative;
     display: flex;
-    position: relative;
+   
 }
 
 #navbar{
-   
+  position: relative;
     display: flex;
     list-style-type: none;
 
 }
+
+#nav1{
+background-color: #1f1c1c5b;
+backdrop-filter: blur(2px)
+}
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 #navbar a{
     color: white;
     text-decoration: none;
     padding: 20px;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Commissioner", sans-serif;
     text-transform: uppercase;
     font-size: 2vmin;
     font-weight: 200;
+}
+
+#navMob{
+  margin-bottom: 20px;
 }
 
 #navbar a:hover{
@@ -81,12 +91,6 @@ color: rgb(26, 173, 206);
 
 /* .......................moblie navbar ......................*/
 
-/* body {
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
-  } */
-
   a{
     font-family: "Quicksand", sans-serif;
     text-decoration: none;
@@ -141,7 +145,7 @@ color: rgb(26, 173, 206);
     z-index: 1;
     transform-origin: 5px 0px;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 opacity 0.55s ease;
   }
   
@@ -177,13 +181,14 @@ color: rgb(26, 173, 206);
   {
     position: absolute;
     text-transform: uppercase;
-    width: 180px;
-    height: 580px;
+    min-width: 99vmin;
+    min-height: 150vmin;
     box-shadow: 0 0 10px #83838300;
     margin: -50px 0 0 -50px;
-    padding: 50px;
+    padding: 80px;
     padding-top: 125px;
-    background-color: #000000;
+    background-color: #000000bc;
+    backdrop-filter: blur(4px);
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
@@ -192,7 +197,7 @@ color: rgb(26, 173, 206);
   
   #menu li
   {
-    padding: 10px 0;
+    padding: 30px 0;
     transition-delay: 2s;
   }
   

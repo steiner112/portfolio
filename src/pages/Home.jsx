@@ -14,12 +14,13 @@ function Home() {
     return (
         <>
             <main className="homeFlex">
+                
                 <div id="text">
                     <h2>"codewithanurag"</h2>
-                    <h1><span>i'm a Web</span><span id="devText"> Devloper</span></h1>
+                    <div>i'm a Web <span id="devText"> Devloper</span></div>
                     <h5>A Full-Stack Web Developer passionate about creating interactive applications and experiences on the web.</h5>
                 </div>
-                <div className="homeFlex2"><button onClick={()=>{downloadFileAtUrl(PDF_FILE_URL)}}>Download cv</button></div>
+                <div className="homeFlex2"><button id="hmBtn" onClick={()=>{downloadFileAtUrl(PDF_FILE_URL)}}>Download CV</button></div>
                
             </main>
 
