@@ -1,8 +1,10 @@
 /* home page  */
 @import url("https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Lexend:wght@100..900&family=Quicksand:wght@300&family=Sarpanch:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 #text {
   position: relative;
   width: 52vw;
@@ -37,8 +39,8 @@
 }
 .homeFlex {
   position: relative;
-  top: 40%;
-  height: 80vh;
+  width: 100%;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -150,20 +152,25 @@
 }
 /* ....................about page ......................... */
 #aboutTextBox {
+  font-family: "Raleway", sans-serif;
   position: relative;
-  width: 60vw;
+  top: 30%;
+  bottom: 50%;
+  width: 70vw;
+  height: -moz-max-content;
+  height: max-content;
   overflow: hidden;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 80vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3vmin;
-  font-family: "Commissioner", sans-serif;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: 100;
   font-style: normal;
-  font-variation-settings: "slnt" 0, "FLAR" 0, "VOLM" 0;
 }
 
 #carforAbout {
@@ -191,151 +198,63 @@
   color: #00e280;
 }
 
-.cards {
+#card {
   position: relative;
+  background-color: rgba(63, 71, 74, 0.66);
+  -webkit-backdrop-filter: blur(10%);
+          backdrop-filter: blur(10%);
+  color: rgb(255, 255, 255);
   display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  min-width: 300px;
+  height: 45vh;
+  padding: 2vmin;
+  border-radius: 6%;
   justify-content: center;
   align-items: center;
-  font-family: "Roboto Slab", serif;
+  transition: all 1s ease;
+  margin: 5px;
+  scroll-snap-align: center;
+}
+
+#card h1 {
+  position: relative;
+  top: 2%;
+  margin: 0%;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0%;
+}
+
+#card img {
+  border-radius: 10%;
+  position: relative;
   width: 100%;
-  height: 100vh;
-  padding: 20px;
-  top: 20px;
-  flex-wrap: wrap;
-  display: flex;
-  display: -webkit-flex;
+  max-height: 32vh;
+}
+
+#card:hover {
+  background-color: rgba(122, 184, 157, 0.6784313725);
+  box-shadow: 1px 1px 5px 2px rgb(51, 49, 49) inset;
+}
+
+#card-box {
+  position: relative;
   justify-content: center;
-  -webkit-justify-content: center;
-}
-
-.card--1 .card__img, .card--1 .card__img--hover {
-  background-image: url("https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-}
-
-.card--2 .card__img, .card--2 .card__img--hover {
-  background-image: url("https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-}
-
-.card__like {
-  width: 18px;
-}
-
-.card__clock {
-  width: 15px;
-  vertical-align: middle;
-  fill: #AD7D52;
-}
-
-.card__time {
-  font-size: 12px;
-  color: #AD7D52;
-  vertical-align: middle;
-  margin-left: 5px;
-}
-
-.card__clock-info {
-  float: right;
-}
-
-.card__img {
-  visibility: hidden;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 235px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-.card__info-hover {
-  position: absolute;
-  padding: 16px;
-  width: 100%;
-  opacity: 0;
-  top: 0;
-}
-
-.card__img--hover {
-  transition: 0.2s all ease-out;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  position: absolute;
-  heder-top-left-radius: 12px;
-  boright: 235px;
-  border-top-right-radius: 12px;
-  top: 0;
-}
-
-.card {
-  margin: 25px;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-  background-color: rgba(255, 255, 255, 0.5019607843);
-  width: 300px;
+  overflow: scroll;
+  scroll-snap-type: mandatory;
+  width: 95vw;
   height: -moz-fit-content;
   height: fit-content;
-  position: relative;
-  border-radius: 12px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
 }
 
-.card:hover {
-  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-  transform: scale(1.1, 1.1);
-}
-
-.card__info {
-  z-index: 2;
-  max-height: 90vh;
-  background-color: rgba(37, 46, 44, 0.7490196078);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  padding: 16px 24px 24px 24px;
-}
-
-.card__category {
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  color: #868686;
-}
-
-.card__title {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  font-family: "Roboto Slab", serif;
-}
-
-.card__by {
-  font-size: 12px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-}
-
-.card__author {
-  font-weight: 600;
-  text-decoration: none;
-  color: #AD7D52;
-}
-
-.card:hover .card__img--hover {
-  height: 100%;
-  opacity: 0.3;
-}
-
-.card:hover .card__info {
-  background-color: transparent;
-  position: relative;
-}
-
-.card:hover .card__info-hover {
-  opacity: 1;
+#card-box::-webkit-scrollbar {
+  display: none;
 }/*# sourceMappingURL=allPages.css.map */

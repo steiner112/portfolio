@@ -1,14 +1,15 @@
 header{
     position: relative;
+    height: fit-content;
 }
 main{
     position: relative;
-    top: 0%;
-    bottom: 0%;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 footer{
     position: relative;
+    height: fit-content;
 }

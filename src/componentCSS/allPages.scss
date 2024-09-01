@@ -1,348 +1,277 @@
 /* home page  */
 #text {
-    position: relative;
+  position: relative;
+  width: 52vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Expletus Sans", sans-serif;
+}
+
+@media screen and (min-width:300px) {
+  #text {
+    width: 80%;
+  }
+  
+
+}
+
+@media screen and (min-width:650px) {
+  #text {
+    width: 90vw;
+  };
+
+
+}
+
+@media screen and (min-width:850px) {
+  #text {
+    width: 70vw;
+  }
+
+
+  #aboutTextBox {
+    width: 90px;
+    height: 642px;
+  }
+
+  
+
+}
+
+@media screen and (min-width:1144px) {
+  #text {
     width: 52vw;
-    display: flex;
-    flex-direction: column;
-    font-family: "Expletus Sans", sans-serif;
   }
-
-  @media screen and (min-width:300px) {
-    #text{
-      width: 80%;
-     }
-  }
-  @media screen and (min-width:650px) {
-    #text{
-      width: 90vw;
-     }
-     
-  }
-  @media screen and (min-width:850px) {
-    #text{
-      width: 70vw;
-     }
-     #aboutTextBox{
-      width: 90px;
-      height: 642px;
-     }
+}
 
 
-  }
-  @media screen and (min-width:1144px) {
-    #text{
-      width: 52vw;
-     }
-  }
- 
+.homeFlex {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .homeFlex{
-    position: relative;
-    top: 40%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .homeFlex2{
-    position: relative;
-    width: 52vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.homeFlex2 {
+  position: relative;
+  width: 52vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeFlex2 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#text h2 {
+  font-size: 4vmin;
+  text-transform: uppercase;
+  margin: 0%;
+  color: rgb(29, 205, 178);
+}
+
+#text div {
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 8vmin;
+  font-weight: 600;
+  margin: 0%;
+  color: rgb(255, 255, 255);
+}
+
+#devText {
+  color: rgb(29, 205, 178);
+}
+
+#text h5 {
+  margin-top: 0%;
+  font-size: 3vmin;
+  font-weight: 200
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+#text span {
+  color: white;
+}
+
+/* button  */
+#hmBtn {
+  --green: rgb(29, 205, 178);
+  margin: 20px;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: "Expletus Sans", sans-serif;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%, transparent 60%, rgba(27, 253, 156, 0.1) 100%);
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgb(29, 205, 178), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+}
+
+#hmBtn:hover {
+  color: #82ffc9;
+  box-shadow: inset 0 0 10px rgb(29, 205, 178), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+
+#hmBtn:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform .4s ease-in-out;
+  background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%, rgba(27, 253, 156, 0.1) 60%, transparent 100%);
+}
+
+#hmBtn:hover:before {
+  transform: translateX(15em);
+}
+
+/* ........................ home.........................end  */
+
+#devText {
+  position: relative;
+  color: rgb(29, 205, 178);
+  animation-name: text;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes text {
+  0% {
+    color: rgb(19, 215, 186);
   }
 
-  .homeFlex2 button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #text h2 {
-    font-size: 4vmin;
-    text-transform: uppercase;
-    margin: 0%;
-    color: rgb(29, 205, 178);
-  }
-  
-  #text div {
-    flex-wrap: nowrap;
-    flex-direction: row;
-    font-size: 8vmin;
-    font-weight: 600;
-    margin: 0%;
+  50% {
     color: rgb(255, 255, 255);
   }
 
-  #devText{
+  100% {
     color: rgb(29, 205, 178);
   }
-  
-  #text h5 {
-    margin-top: 0%;
-    font-size: 3vmin;
-    font-weight: 200
-  }
-  
-  @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&display=swap');
-  
-  #text span {
-    color: white;
-  }
-  
-  /* button  */
-  #hmBtn {
-    --green: rgb(29, 205, 178);
-    margin : 20px;
-    font-size: 15px;
-    padding: 0.7em 2.7em;
-    letter-spacing: 0.06em;
-    position: relative;
-    font-family: "Expletus Sans", sans-serif;
-    border-radius: 0.6em;
-    overflow: hidden;
-    transition: all 0.3s;
-    line-height: 1.4em;
-    border: 2px solid var(--green);
-    background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%, transparent 60%, rgba(27, 253, 156, 0.1) 100%);
-    color: var(--green);
-    box-shadow: inset 0 0 10px rgb(29, 205, 178), 0 0 9px 3px rgba(27, 253, 156, 0.1);
-  }
-  
-  #hmBtn:hover {
-    color: #82ffc9;
-    box-shadow: inset 0 0 10px rgb(29, 205, 178), 0 0 9px 3px rgba(27, 253, 156, 0.2);
-  }
-  
-  #hmBtn:before {
-    content: "";
-    position: absolute;
-    left: -4em;
-    width: 4em;
-    height: 100%;
-    top: 0;
-    transition: transform .4s ease-in-out;
-    background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%, rgba(27, 253, 156, 0.1) 60%, transparent 100%);
-  }
-  
-  #hmBtn:hover:before {
-    transform: translateX(15em);
-  }
-
- /* ........................ home.........................end  */
-
- #devText{
-  position: relative;
-  color: rgb(29, 205, 178);
-animation-name: text; 
-animation-duration: 2s;
-animation-iteration-count: infinite;}
-
-@keyframes text {
-  0%{color: rgb(19, 215, 186);}
-  50%{color: rgb(255, 255, 255);}
-  100%{color: rgb(29, 205, 178);}
 }
- 
- /* ....................about page ......................... */
- @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Quicksand:wght@300..700&display=swap');
- #aboutTextBox{
-    position: relative;
-    width: 60vw;
-    overflow: hidden;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3vmin;
-    font-family: "Commissioner", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-variation-settings:
-      "slnt" 0,
-      "FLAR" 0,
-      "VOLM" 0;
- }
 
- 
- #carforAbout{
+/* ....................about page ......................... */
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Lexend:wght@100..900&family=Quicksand:wght@300&family=Sarpanch:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+#aboutTextBox {
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  top: 30%;
+  bottom: 50%;
+  width: 70vw;
+  height: max-content;
+  overflow: hidden;
+  height: 80vh;
+  object-fit: contain;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vmin;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+#carforAbout {
   top: 388%;
   padding: 4vmin;
   position: relative;
-display: flex;
-height: fit-content;
-border-radius: 5%;
-background-image: url("https://cdn.pixabay.com/photo/2020/05/11/15/21/blue-flower-5158746_1280.jpg");
-backdrop-filter: blur(40px);
-object-fit: cover;
-box-shadow: 1px 1px 20px 5px black ;
-opacity: 0.6;
- }
+  display: flex;
+  height: fit-content;
+  border-radius: 5%;
+  background-image: url("https://cdn.pixabay.com/photo/2020/05/11/15/21/blue-flower-5158746_1280.jpg");
+  backdrop-filter: blur(40px);
+  object-fit: cover;
+  box-shadow: 1px 1px 20px 5px black;
+  opacity: 0.6;
+}
 
- #carforAbout:hover{
+#carforAbout:hover {
   opacity: 1;
- }
+}
 
- .textShade{
-    color: #00e280;
- }
+.textShade {
+  color: #00e280;
+}
+
 //  .................... about page ................... 
-
-
-
-
-
-//  ...............................project................ page /................
+ //  ...............................project................ page /................
 // .............................................................................\.. 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
+// ...............cards start /.................
 
-.cards {
-
+#card{
   position: relative;
+  background-color: rgba(63, 71, 74, 0.66);
+  backdrop-filter: blur(10%);
+  color: rgb(255, 255, 255);
   display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  min-width: 300px;
+  height: 45vh;
+  padding: 2vmin;
+  border-radius: 6%;
   justify-content: center;
   align-items: center;
-  font-family: 'Roboto Slab', serif;
-    width: 100%;
-    height: 100vh;
-    padding: 20px;
-    top: 20px;
-    flex-wrap: wrap;
-    display: flex;
-    display: -webkit-flex;
-    justify-content: center;
-    -webkit-justify-content: center;
+  transition: all 1s ease;
+  margin: 5px;
+  scroll-snap-align: center;
 }
-
-.card--1 .card__img, .card--1 .card__img--hover {
-    background-image: url('https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
-}
-
-.card--2 .card__img, .card--2 .card__img--hover {
-    background-image: url('https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
-}
-
-.card__like {
-    width: 18px;
-}
-
-.card__clock {
-    width: 15px;
-  vertical-align: middle;
-    fill: #AD7D52;
-}
-.card__time {
-    font-size: 12px;
-    color: #AD7D52;
-    vertical-align: middle;
-    margin-left: 5px;
-}
-
-.card__clock-info {
-    float: right;
-}
-
-.card__img {
-  visibility: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 235px;
-  border-top-left-radius: 12px;
-border-top-right-radius: 12px;
-  
-}
-
-.card__info-hover {
-    position: absolute;
-    padding: 16px;
-  width: 100%;
-  opacity: 0;
-  top: 0;
-}
-
-.card__img--hover {
-  transition: 0.2s all ease-out;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-  position: absolute;
-    heder-top-left-radius: 12px;
-boright: 235px;
-  border-top-right-radius: 12px;
-top: 0;
-  
-}
-.card {
-  margin: 25px;
-  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-  background-color: #ffffff80;
-    width: 300px;
-    height: fit-content;
+#card h1{
   position: relative;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+  top: 2%;
+  margin: 0%;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0%;
 }
-.card:hover {
-  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
-    transform: scale(1.10, 1.10);
-}
-
-.card__info {
-z-index: 2;
-max-height: 90vh;
-  background-color: #252e2cbf;
-  backdrop-filter: blur(2px);
-  border-bottom-left-radius: 12px;
-border-bottom-right-radius: 12px;
-   padding: 16px 24px 24px 24px;
+#card img{
+  border-radius: 10%;
+  position: relative;
+  width: 100%;
+  max-height: 32vh;
 }
 
-.card__category {
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 2px;
-    font-weight: 500;
-  color: #868686;
+#card:hover{
+  background-color: #7ab89dad;
+  box-shadow: 1px 1px 5px 2px rgb(51, 49, 49) inset;
 }
 
-.card__title {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    font-family: 'Roboto Slab', serif;
+#card-box{
+  position: relative;
+  justify-content: center;
+  overflow: scroll;
+  scroll-snap-type: mandatory;
+  width: 95vw;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+#card-box::-webkit-scrollbar{
+  display: none
 }
 
-.card__by {
-    font-size: 12px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-}
-
-.card__author {
-    font-weight: 600;
-    text-decoration: none;
-    color: #AD7D52;
-}
-
-.card:hover .card__img--hover {
-    height: 100%;
-    opacity: 0.3;
-}
-
-.card:hover .card__info {
-    background-color: transparent;
-    position: relative;
-}
-
-.card:hover .card__info-hover {
-    opacity: 1;
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');

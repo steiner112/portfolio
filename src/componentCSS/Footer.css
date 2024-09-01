@@ -1,6 +1,5 @@
 footer{
     position: fixed;
-    /* z-index: 10; */
     display: flex; 
     justify-content: space-around;
     width: 100%;
@@ -43,7 +42,18 @@ footer{
         margin-top: 20px;
       }
    }
-   @media screen and (min-width:701px) {
+   @media screen and (max-width:720px) {
    
-    
+    #card-box{
+        /* margin-bottom: 18px; */
+        height: fit-content;
+    }
+    footer{
+        position: fixed;
+        bottom: 0%;
+      }    
+
+      .homeFlex{
+        margin-bottom: 54px;
+      }
 }

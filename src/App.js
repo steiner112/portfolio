@@ -12,7 +12,7 @@ import "./component/iconsSocial/insta.png"
 import ErrorPage404 from './pages/ErrorPage404.jsx';
 import Services from './pages/Services.jsx';
 import Projects from './pages/Projects.jsx';
-import Footer from './pages/Footer.jsx';
+import Footer from './component/Footer.jsx';
 
 function App() {
   return (
