@@ -44,6 +44,20 @@
   }
 }
 
+.homeFlex123123 {
+  position: relative;
+  width: 100%;
+  height: 76vh;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeFlex123123::-webkit-scrollbar{
+  display: none;
+}
 
 .homeFlex {
   position: relative;
@@ -260,7 +274,6 @@
 #card-box{
   position: relative;
   justify-content: center;
-  overflow: scroll;
   scroll-snap-type: mandatory;
   width: 95vw;
   height: fit-content;

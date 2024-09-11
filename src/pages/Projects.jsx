@@ -10,7 +10,7 @@ fetch('https://picsum.photos/v2/list')
 },[])
   return (
     <>
-    <main className='homeFlex'>
+    <main className='homeFlex123123'>
       <div id="card-box">
         { data.map((item)=>{
     return < div key={item.id} id='card'>
