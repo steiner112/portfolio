@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 function About() {
     function Animation12(){
-        document.querySelector('#aboutTextBox').style.animation = "TextBox 1s forwards"
+        document.querySelector('#aboutTextBox').style.animation = "TextBox 2.5s forwards"
     }
     useEffect(()=>{
         Animation12()
