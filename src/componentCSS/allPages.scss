@@ -5,64 +5,100 @@
   display: flex;
   flex-direction: column;
   font-family: "Expletus Sans", sans-serif;
+  animation:  2s ease 1;
 }
 
-@media screen and (min-width:300px) {
+#loading{
+  position: absolute;
+  font-size: 5vmin;
+  font-family: "Expletus Sans", sans-serif;
+}
+
+@keyframes Text {
+ 0%{transform: translateX(300px);opacity: 0;}
+ 100%{transform: translateX(0px);opacity: 1;}
+}
+@keyframes Text2 {
+  0%{transform: translateX(-300px);opacity: 0;}
+  100%{transform: translateX(0px);opacity: 1;}
+ }
+ @keyframes Text3 {
+  0%{transform: translateY(-300px);opacity: 0;}
+  100%{transform: translateY(0px);opacity: 1;}
+ }
+ @keyframes button {
+  0%{transform: translateY(-300px);opacity: 0;}
+  90%{transform: translateY(10px);opacity: 0.6;}
+  100%{transform: translateY(0px);opacity: 1;}
+ }
+ @keyframes TextBox {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+ }
+ @keyframes Box1 {
+  0%{transform: scale(1);opacity: 1;}
+  50%{transform: scale(0.6) ; opacity: 0.5;}
+  100%{transform: scale(1);opacity: 1;margin-left: 0px;}
+ }
+ 
+@media screen and (min-width: 300px) {
   #text {
     width: 80%;
   }
-  
-
+  #card {
+    width: 50vw;
+  }
 }
 
-@media screen and (min-width:650px) {
+@media screen and (max-width: 849px) { /* Fixed: added px */
+  #card-box {
+    width: 200vw;
+  }
+}
+
+@media screen and (min-width: 650px) {
   #text {
     width: 90vw;
-  };
-
-
+  }
 }
 
-@media screen and (min-width:850px) {
+@media screen and (min-width: 850px) {
   #text {
     width: 70vw;
   }
-
 
   #aboutTextBox {
     width: 90px;
     height: 642px;
   }
-
-  
-
 }
 
-@media screen and (min-width:1144px) {
+@media screen and (min-width: 1144px) {
   #text {
     width: 52vw;
   }
 }
 
-.homeFlex123123 {
+.homeFlex1221 {
   position: relative;
-  width: 100%;
-  height: 76vh;
-  overflow: scroll;
+  overflow: hidden;
+  width: fit-content;
+  height: fit-content;
   display: flex;
+  flex-direction: row;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  object-fit: contain;
+  
 }
 
-.homeFlex123123::-webkit-scrollbar{
-  display: none;
-}
 
 .homeFlex {
   position: relative;
+  overflow: hidden;
   width: 100%;
-  height: 75vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -181,10 +217,12 @@
 /* ....................about page ......................... */
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Lexend:wght@100..900&family=Quicksand:wght@300&family=Sarpanch:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 #aboutTextBox {
   font-family: "Raleway", sans-serif;
   position: relative;
   top: 30%;
+  opacity: 0.9;
   bottom: 50%;
   width: 70vw;
   height: max-content;
@@ -225,22 +263,23 @@
 }
 
 //  .................... about page ................... 
- //  ...............................project................ page /................
+//  ...............................project................ page /................
 // .............................................................................\.. 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
 // ...............cards start /.................
 
-#card{
+#card {
   position: relative;
+  min-width: 250px;
+  object-fit: contain;
+  overflow: hidden;
   background-color: rgba(63, 71, 74, 0.66);
   backdrop-filter: blur(10%);
   color: rgb(255, 255, 255);
   display: flex;
-  overflow: hidden;
   flex-direction: column;
-  min-width: 300px;
   height: 45vh;
   padding: 2vmin;
   border-radius: 6%;
@@ -248,10 +287,13 @@
   align-items: center;
   transition: all 1s ease;
   margin: 5px;
+  gap: 10px;
   scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
-#card h1{
-  position: relative;
+
+#card h1 {
+
   top: 2%;
   margin: 0%;
   font-family: "Titillium Web", sans-serif;
@@ -259,32 +301,56 @@
   font-style: normal;
   padding: 0%;
 }
-#card img{
+
+#card img {
   border-radius: 10%;
-  position: relative;
   width: 100%;
   max-height: 32vh;
 }
 
-#card:hover{
+#card:hover {
   background-color: #7ab89dad;
   box-shadow: 1px 1px 5px 2px rgb(51, 49, 49) inset;
 }
 
-#card-box{
+#card-box {
   position: relative;
-  justify-content: center;
-  scroll-snap-type: mandatory;
-  width: 95vw;
-  height: fit-content;
+  align-items: center;
+  overflow: auto;
+  object-fit: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100vw;
+  height: 80vh;
   display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
-  margin-bottom: 0%;
-  padding-bottom: 0%;
-}
-#card-box::-webkit-scrollbar{
-  display: none
 }
 
+#card-box::-webkit-scrollbar {
+  display: none
+}
+@media screen and (min-width : 300px) {
+  #card{
+    min-width: 90vw;
+    margin: 20px
+  }
+}
+@media screen and (min-width : 524px) {
+  #card{
+    min-width: 44vw;
+    margin: 20px
+  }
+}
+@media screen and (min-width : 800px) {
+  #card{
+    min-width: 30
+    vw;
+    margin: 20px
+  }
+}
+@media screen and (min-width : 1200px) {
+  #card{
+    min-width: 26vw;
+    margin: 20px
+  }
+}
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');

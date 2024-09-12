@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const PDF_FILE_URL = "resumeAnuragverma.pdf";
 
@@ -12,7 +12,16 @@ function Home() {
         aTag.click();
         aTag.remove();
     };
+    useEffect(()=>{
+        animationText()
+    },[])
 
+    function animationText() {
+        document.querySelector('#text div').style.animation = "Text 1s forwards";
+        document.querySelector('#hmBtn').style.animation = "button 1.2s forwards";
+        document.querySelector('#text h2').style.animation = "Text2 1s forwards";
+        document.querySelector('#text h5').style.animation = "Text3 1s forwards";
+      }
     return (
         <>
             <main className="homeFlex">

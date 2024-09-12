@@ -44,10 +44,7 @@ footer{
    }
    @media screen and (max-width:720px) {
    
-    #card-box{
-        /* margin-bottom: 18px; */
-        height: fit-content;
-    }
+
     footer{
         position: fixed;
         bottom: 0%;

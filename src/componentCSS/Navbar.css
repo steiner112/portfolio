@@ -119,7 +119,7 @@ color: rgb(26, 173, 206);
     top: 25px;
     left: 25px;
     z-index: 1;
-    -webkit-user-selezzzzzct: none;
+    -webkit-user-select: none;
     user-select: none;
     margin-bottom: 16px;
   }

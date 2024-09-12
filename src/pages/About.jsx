@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 
 function About() {
+    function Animation12(){
+        document.querySelector('#aboutTextBox').style.animation = "TextBox 1s forwards"
+    }
+    useEffect(()=>{
+        Animation12()
+    },[])
+
+    
     return (
         <>
         <main>
