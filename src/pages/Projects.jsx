@@ -21,9 +21,9 @@ try {
 useEffect(() => {
   // Run animation when data has been updated and the component has re-rendered
   
-  if (data.length <= 0) {
-    document.querySelector('#loading').innerHTML = "loading..."
-  }
+  // if (data.length <= 0) {
+  //   document.querySelector('#loading').innerHTML = "loading..."
+  // }
   if(data.length > 0){
     document.querySelector('#loading').style.display = "none"
 
@@ -36,7 +36,7 @@ useEffect(() => {
   return (
     <>
     <main className='homeFlex1221'>
-      <h1 id="loading"></h1>
+      <h1 id="loading">loading...</h1>
       <span id="card-box">
         { data.map((item)=>{
     return < div key={item.id} id='card'>
